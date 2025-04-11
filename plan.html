@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lập kế hoạch - Travel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <h1 class="logo" style="color: #FF6200;">Travel Booking</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Trang chủ</a>
+                <a href="login.html" class="nav-link"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="plan.html" class="nav-link"><i class="fas fa-calendar"></i> Lập kế hoạch</a>
+                <a href="booking.html" class="nav-link"><i class="fas fa-bed"></i> Đặt phòng</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Plan Section -->
+    <section class="container my-5">
+        <div class="search-box shadow-lg">
+            <h2 class="text-center mb-4">Lập kế hoạch du lịch</h2>
+            <form id="planForm" class="mb-4">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <input type="date" id="startDate" class="form-control" placeholder="Ngày đi">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" id="endDate" class="form-control" placeholder="Ngày về">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" id="location" class="form-control" placeholder="Thêm địa điểm">
+                    </div>
+                </div>
+                <button type="button" onclick="addPlan()" class="btn btn-search w-100 mt-3">Thêm vào kế hoạch</button>
+            </form>
+            <div id="planList" class="results"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <p>© 2025 Travel Booking. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
